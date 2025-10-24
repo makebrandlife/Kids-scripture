@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: white;
+}
+
+/* Mobile-optimized buttons */
+.btn-primary {
+  background: #3B82F6;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: bold;
+  border: none;
+  font-size: 18px;
+}
+
+.btn-primary:hover {
+  background: #2563EB;
+}
+
+/* Card styles for stories */
+.story-card {
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border: 1px solid #E5E7EB;
+  overflow: hidden;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .btn-primary {
+    padding: 16px 32px;
+    font-size: 20px;
+  }
+}
