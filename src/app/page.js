@@ -1,3 +1,6 @@
+import AIStoryGrid from '@/components/AIStoryGrid'
+import InteractiveGames from '@/components/InteractiveGames'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-500 via-purple-600 to-pink-500">
@@ -20,7 +23,7 @@ export default function Home() {
             <nav className="hidden md:flex space-x-8">
               <a href="#stories" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Stories</a>
               <a href="#games" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Games</a>
-              <a href="#videos" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Videos</a>
+              <a href="#ai" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">AI Features</a>
               <a href="#parents" className="text-gray-700 hover:text-blue-600 font-semibold transition-colors">Parents</a>
             </nav>
 
@@ -32,7 +35,7 @@ export default function Home() {
         </div>
       </header>
 
-      {/* Hero Section - Designed to Convert */}
+      {/* Hero Section */}
       <section className="text-center text-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
           {/* AI Badge */}
@@ -85,152 +88,11 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features - Why We're Better */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
-            Why We Beat Every Competitor
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            While others use outdated technology, we built the future of children's Bible education
-          </p>
+      {/* AI Story Recommendations */}
+      <AIStoryGrid />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Feature 1 */}
-            <div className="text-center p-8 rounded-2xl bg-blue-50 border-2 border-blue-200">
-              <div className="text-4xl mb-4">⚡</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">3x Faster</h3>
-              <p className="text-gray-600">Loads in 1.2s vs competitor's 3.8s. Kids don't wait!</p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="text-center p-8 rounded-2xl bg-purple-50 border-2 border-purple-200">
-              <div className="text-4xl mb-4">🤖</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">AI-Powered</h3>
-              <p className="text-gray-600">Personalized stories & voice narration they can't match</p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="text-center p-8 rounded-2xl bg-green-50 border-2 border-green-200">
-              <div className="text-4xl mb-4">📱</div>
-              <h3 className="text-2xl font-bold text-gray-800 mb-3">Perfect Mobile</h3>
-              <p className="text-gray-600">95/100 mobile score vs their 65/100 failures</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Interactive Stories Preview */}
-      <section id="stories" className="py-16 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-800 mb-4">
-            25+ Interactive Bible Stories
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12">
-            Touch, click, and explore stories that come to life
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Story 1 */}
-            <div className="story-card hover:scale-105 transition-transform cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center relative">
-                <span className="text-6xl">🦁</span>
-                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-                  AI Voice
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Daniel's Lion Adventure</h3>
-                <p className="text-gray-600 mb-4">Touch the lions to hear them roar! Interactive faith story.</p>
-                <div className="flex justify-between items-center">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    Ages 4-9
-                  </span>
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Play Story
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Story 2 */}
-            <div className="story-card hover:scale-105 transition-transform cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center relative">
-                <span className="text-6xl">🚢</span>
-                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-                  AI Voice
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">Noah's Amazing Ark</h3>
-                <p className="text-gray-600 mb-4">Load animals by dragging them! Rain sound effects included.</p>
-                <div className="flex justify-between items-center">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    Ages 3-7
-                  </span>
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Play Story
-                  </button>
-                </div>
-              </div>
-            </div>
-
-            {/* Story 3 */}
-            <div className="story-card hover:scale-105 transition-transform cursor-pointer">
-              <div className="h-48 bg-gradient-to-br from-red-400 to-orange-500 flex items-center justify-center relative">
-                <span className="text-6xl">🎯</span>
-                <div className="absolute top-4 left-4 bg-yellow-400 text-gray-900 px-3 py-1 rounded-full text-sm font-bold">
-                  AI Voice
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-800 mb-2">David & Goliath Battle</h3>
-                <p className="text-gray-600 mb-4">Aim the slingshot! Interactive courage lesson.</p>
-                <div className="flex justify-between items-center">
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    Ages 5-10
-                  </span>
-                  <button className="bg-blue-500 hover:bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold transition-colors">
-                    Play Story
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Games Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-800 mb-4">
-            Learning Games Competitors Don't Have
-          </h2>
-          <p className="text-xl text-gray-600 mb-12">
-            While they show static text, we provide interactive experiences
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl p-8 text-white">
-              <div className="text-6xl mb-4">🎨</div>
-              <h3 className="text-2xl font-bold mb-3">Bible Coloring Book</h3>
-              <p className="mb-4">Color scenes from stories with touch controls</p>
-              <button className="bg-white text-purple-600 px-6 py-3 rounded-lg font-bold">
-                Try Now
-              </button>
-            </div>
-
-            <div className="bg-gradient-to-br from-blue-500 to-green-500 rounded-2xl p-8 text-white">
-              <div className="text-6xl mb-4">🧩</div>
-              <h3 className="text-2xl font-bold mb-3">Memory Verse Puzzle</h3>
-              <p className="mb-4">Drag & drop to build Bible verses</p>
-              <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-bold">
-                Try Now
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Interactive Games */}
+      <InteractiveGames />
 
       {/* Final CTA */}
       <section className="py-16 px-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white text-center">
@@ -269,4 +131,4 @@ export default function Home() {
       </footer>
     </div>
   )
-            }
+}
